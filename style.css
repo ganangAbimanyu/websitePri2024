@@ -96,10 +96,10 @@ header{
 }
 .heading h1{
     font-size: 2rem;
-    color: black;
+    color: FAF7F0;
 }
 .running-text-wrapper {
-    display: block; /* Ensure it is a block-level element */
+    display: block; 
     overflow: hidden;
     width: 100%;
     background-color: #181C14;
@@ -107,23 +107,23 @@ header{
 .running-text {
     width: 100%;
     overflow: hidden;
-    background-color: #181C14; /* Optional background color */
+    background-color: #181C14; 
     display: flex;
-    align-items: center; /* Vertically center the text */
+    align-items: center; 
 }
 .running-text p {
     display: inline-block;
     white-space: nowrap;
-    margin-right: 50px; /* Adjust this value to control spacing between texts */
-    color: white; /* Set the text color to brown */
-    animation: marquee 10s linear infinite; /* Slower, 10s animation for smoother scrolling */
+    margin-right: 50px; 
+    color: white; 
+    animation: marquee 10s linear infinite; 
 }
 @keyframes marquee {
     0% {
-        transform: translateX(200%); /* Start offscreen to the right */
+        transform: translateX(200%);
     }
     100% {
-        transform: translateX(-200%); /* Completely offscreen to the left */
+        transform: translateX(-200%); 
     }
 }
 .about{
@@ -286,7 +286,7 @@ header{
               -webkit-text-fill-color: transparent;
             }
             .ticket-btn-jav {
-                background-color: #fffc00; /* Or any other color matching your theme */
+                background-color: #fffc00; 
                 color: #000;
                 font-size: 16px;
                 font-weight: bold;
@@ -301,13 +301,13 @@ header{
                 margin-top: 20px;
             }
             .ticket-btn-jav:hover {
-                background-color: #ffdd00; /* Slightly darker shade on hover */
-                color: #fff; /* Change text color on hover */
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+                background-color: #ffdd00; 
+                color: #fff; 
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
             }
             .ticket-btn-py {
-                background-color: #00aaff; /* Blue button for python class in face2 */
-                color: #fff; /* White text for better contrast */
+                background-color: #00aaff; 
+                color: #fff; 
                 font-size: 16px;
                 font-weight: bold;
                 padding: 10px 20px;
@@ -321,9 +321,9 @@ header{
                 margin-top: 20px;
             }
             .ticket-btn-py:hover {
-                background-color: #0077cc; /* Slightly darker blue on hover */
-                color: #fff; /* Maintain white text */
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+                background-color: #0077cc; 
+                color: #fff; 
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
             }
           }
           &.face2 {
@@ -385,17 +385,14 @@ header{
     text-align: center;
     color: #262626;
 }
-
 .form-group {
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
 }
-
 label {
     display: block;
     font-weight: bold;
 }
-
 input[type="text"],
 input[type="email"],
 
@@ -406,7 +403,6 @@ textarea {
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
 }
-
 button[type="button"] {
     width: 100%;
     padding: 10px;
@@ -415,7 +411,6 @@ button[type="button"] {
     border-radius: 5px;
     cursor: pointer;
 }
-
 button[type="button"]:hover {
     background-color: black;
     color: white;
