@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #5907E6;
+    --second-color: #2c3f9a ;
+}
+section {
+    padding: 50px 10%;
+}
+img {
+    width: 100%;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    padding: 5px 5%;
+    transition: 0.2s;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 14%;
+}
+.navbar {
+    display: flex;
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 30px;
+    color: white ;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.navbar a:hover {
+    transition: 0.2s;
+    border-bottom: 0.1rem solid burlywood;
+    color: burlywood;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-size: cover;
+    background-image: url(img/pesta_rakyat_indonesia_\(2560_x_1400_piksel\)_\(2\)[1].png);
+    gap: 1rem;
+    color: black;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-11, 0)
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11, 0);
+    }
+}
+.heading{
+    text-align: center;
+    text-transform: capitalize;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+}
+.heading h1{
+    font-size: 2rem;
+    color: black;
+}
+.running-text-wrapper {
+    display: block; /* Ensure it is a block-level element */
+    overflow: hidden;
+    width: 100%;
+    background-color: #181C14;
+}
+.running-text {
+    width: 100%;
+    overflow: hidden;
+    background-color: #181C14; /* Optional background color */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+}
+.running-text p {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 50px; /* Adjust this value to control spacing between texts */
+    color: white; /* Set the text color to brown */
+    animation: marquee 10s linear infinite; /* Slower, 10s animation for smoother scrolling */
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(200%); /* Start offscreen to the right */
+    }
+    100% {
+        transform: translateX(-200%); /* Completely offscreen to the left */
+    }
+}
+.about{
+    width: 100%;
+    min-height: 50vh;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/gambar2[1].png);
+    background-size: cover;
+    gap: 1rem;
+    color: black; 
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.about-img{
+    flex: 1 1 21rem;
+}
+.about-img img{
+    position: relative;
+    top: -90px;
+    width: 20rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+.about-text{
+    flex: 1 1 40rem;
+}
+.about-text h2{
+    margin-top: -30px;
+    font-size: 1.2rem;
+}
+.about-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.gallery {
+    margin: 0;
+    min-height: 100vh;
+    background: #462b2d;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vmin;
+    overflow: hidden;
+    transform: skew(5deg);
+  
+    .card {
+      flex: 1;
+      transition: all 1s ease-in-out;
+      height: 75vmin;
+      position: relative;
+      .card__head {
+        color: black;
+        background: #e29534;
+        padding: 0.5em;
+        transform: rotate(-90deg);
+        transform-origin: 0% 0%;
+        transition: all 0.5s ease-in-out;
+        min-width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1em;
+        white-space: nowrap;
+      }
+  
+      &:hover {
+        flex-grow: 10;
+        img {
+          filter: grayscale(0);
+        }
+        .card__head {
+          text-align: center;
+          top: calc(100% - 2em);
+          color: white;
+          background: rgba(0, 0, 0, 0.5);
+          font-size: 2em;
+          transform: rotate(0deg) skew(-5deg);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 1s ease-in-out;
+        filter: grayscale(100%);
+      }
+      &:not(:nth-child(5)) {
+        margin-right: 1em;
+      }
+    }
+  }
+.tiket {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Righteous", cursive;
+    min-height: 100vh;
+    background-color: #bd8d6a;
+    background-image: linear-gradient(180deg, #bd8d6a 0%, #46573e 100%);
+  
+    .ticket-container {
+      max-width: 100vw;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 35px;
+      margin: 0 auto;
+      padding: 40px 0;
+  
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 0 auto;
+        background: #000;
+        border-radius: 15px;
+        box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+  
+        .face {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+  
+          &.face1 {
+            box-sizing: border-box;
+            padding: 20px;
+  
+           .title {
+              margin: 0;
+              padding: 0;
+            }
+  
+            .java {
+              background-color: #fffc00;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+  
+            .python {
+              background-color: #00fffc;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            .ticket-btn-jav {
+                background-color: #fffc00; /* Or any other color matching your theme */
+                color: #000;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: 0.3s ease;
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .ticket-btn-jav:hover {
+                background-color: #ffdd00; /* Slightly darker shade on hover */
+                color: #fff; /* Change text color on hover */
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+            }
+            .ticket-btn-py {
+                background-color: #00aaff; /* Blue button for python class in face2 */
+                color: #fff; /* White text for better contrast */
+                font-size: 16px;
+                font-weight: bold;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: 0.3s ease;
+                width: 100%;
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .ticket-btn-py:hover {
+                background-color: #0077cc; /* Slightly darker blue on hover */
+                color: #fff; /* Maintain white text */
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+            }
+          }
+          &.face2 {
+            transition: 0.5s;
+  
+            h2 {
+              margin: 0;
+              padding: 0;
+              font-size: 10em;
+              color: #fff;
+              transition: 0.5s;
+              text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+              z-index: 10;
+            }
+          }
+        }
+      }
+  
+      .card:hover .face.face2 {
+        height: 60px;
+  
+        h2 {
+          font-size: 2em;
+        }
+      }
+  
+      .card:nth-child(1) .face.face2 {
+        background-image: linear-gradient(
+          40deg,
+          #FFBB5C 0%,
+          #F4DFB6 45%,
+          #DE8F5F 100%
+        );
+        border-radius: 15px;
+      }
+  
+      .card:nth-child(2) .face.face2 {
+        background-image: linear-gradient(
+          40deg,
+          #FFBB5C 0%,
+          #F4DFB6 45%,
+          #DE8F5F 100%
+        );
+        border-radius: 15px;
+      }
+    }
+  }
+.containerr {
+    font-family: 'Poppins', sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerr h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #262626;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: black;
+    color: white;
+}
+.map iframe{
+   width: 100%;
+   height: 500px;
+   border-radius: 10px;
+}
+.social a{
+    color: var(--second-color);
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.copyright{
+    text-align: center;
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+@media (max-width: 1150px){
+    header {
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 11px 4%;
+    }
+    #menu-icon {
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+        border-top: 2px solid var(--second-color);
+        transition: 0.2s;
+        text-align: left;
+    }
+    .navbar.active {
+        top: 100%;
+    }
+    .navbar a {
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+    .home-text span {
+        font-size: 0.9rem;
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    .home-text{
+        padding-top: inherit;
+    }
+    .shop-container .box{
+        margin-top: 6rem;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
