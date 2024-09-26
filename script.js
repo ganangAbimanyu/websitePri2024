@@ -1,3 +1,30 @@
+
+$(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        $('html, body').animate({.
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+
+
+  // Function to detect if the user is on a mobile device
 // Function to detect if the user is on a mobile device
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -49,3 +76,13 @@ function adjustCardsForMobile() {
 document.addEventListener('DOMContentLoaded', function() {
     adjustForMobile();
 });
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    var menu = document.getElementById('menu');
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+    }
+});
+
