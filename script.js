@@ -18,12 +18,18 @@ $(document).ready(function(){
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
-      }
-    });
-  });
+      }
+    });
+  });
 
+website2
 // apalah
   // Function to detect if the user is on a mobile device
+=======
+
+// Function to detect if the user is on a mobile device
+// Function to detect if the user is on a mobile device
+main
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
