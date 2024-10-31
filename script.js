@@ -22,9 +22,14 @@ $(document).ready(function(){
     });
   });
 
+website2
+// apalah
+  // Function to detect if the user is on a mobile device
+=======
 
 // Function to detect if the user is on a mobile device
 // Function to detect if the user is on a mobile device
+main
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
@@ -85,3 +90,37 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     }
 });
 
+// Hamburger Menu
+
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const navbarList = document.querySelector(".navbar-list");
+
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("active");
+  navbarList.classList.toggle("show");
+});
+
+// Dark Mode
+
+const darkModeToggle = document.querySelector(".dark-mode-toggle");
+const body = document.body;
+
+function setDarkMode(isDark) {
+  if (isDark) {
+    body.classList.add("dark-mode");
+  } else {
+    body.classList.remove("dark-mode");
+  }
+  localStorage.setItem("darkMode", isDark);
+}
+
+const savedDarkMode = localStorage.getItem("darkMode");
+
+if (savedDarkMode !== null) {
+  setDarkMode(savedDarkMode === "true");
+}
+
+darkModeToggle.addEventListener("click", () => {
+  const isDarkMode = body.classList.toggle("dark-mode");
+  setDarkMode(isDarkMode);
+});
